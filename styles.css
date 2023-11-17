@@ -10,9 +10,10 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('background2.jpg') no-repeat;
+    background: url('background2.jpg') no-repeat fixed;
     background-size: cover;
     background-position: cover;
+    background-color: black;
 }
 
 header {
@@ -20,18 +21,26 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
+    min-width: 360px;
+    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 99;
+    background: rgba(0,0,0, 0.3);
 }
 
-.logo {
+.logo a {
     font-size: 2em;
     color: yellow;
     user-select: none;
+    text-decoration: none;
 }
+
+.logo a:hover {
+    color: rgba(255,255,153, 0.5)
+}
+
 
 .navigation a {
     position: relative;
@@ -42,6 +51,10 @@ header {
     margin-left: 40px;
 }
 
+.navigation a:hover {
+    color: rgba(255,255,153, 0.5)
+}
+/* 
 .navigation a::after{
     content: '';
     position: absolute;
@@ -57,7 +70,7 @@ header {
 
 .navigation a:hover::after{
     transform: scaleX(1);
-}
+} */
 
 .navigation .btnLogin-popup {
     width: 190px;
@@ -70,10 +83,73 @@ header {
     font-size: 1.1em;
     color: yellow;
     font-weight: 900;
-    margin-left: 40px;
+    margin-left: 80px;
 }
 
 .navigation .btnLogin-popup:hover {
     background: yellow;
     color: black;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navigation li {
+    margin-left: 80px;
+}
+
+.icon-list {
+    display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    .navigation li {
+        margin-left: 20px;
+    }
+
+    .navigation .btnLogin-popup {
+        margin-left: 40px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    .icon-list {
+        display: flex;
+    }
+    .icon-list:hover {
+        transform: scale(1.2);
+    }
+
+    .navigation {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 300px;
+        height: 100vh;
+        background: rgba(255,255,255, 0.3);
+    }
+
+    .navigation ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 120px 30px;
+    }
+
+    .navigation li {
+        margin: 10px;
+    }
+
+    .navigation.active-list {
+        display: flex;
+    }
 }

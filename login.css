@@ -127,10 +127,6 @@
 
 .remember-forgot a{
     color: black;
-    text-decoration: none;
-}
-
-.remember-forgot a:hover{
     text-decoration: underline;
 }
 
@@ -156,12 +152,10 @@
 }
 
 .login-register p a{
-    text-decoration: none;
     font-weight: 700;
     color: black;
 }
 
-.login-register p a:hover{
+.login-register a{
     text-decoration: underline;
 }
-
