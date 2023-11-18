@@ -27,7 +27,7 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 99;
-    background: rgba(0,0,0, 0.3);
+    background: rgba(0,0,0, 0.5);
 }
 
 .logo a {
@@ -134,7 +134,7 @@ header {
         right: 0;
         width: 300px;
         height: 100vh;
-        background: rgba(255,255,255, 0.3);
+        background: rgba(0,0,0, 0.5);
     }
 
     .navigation ul{
@@ -142,11 +142,11 @@ header {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        padding: 120px 30px;
+        padding: 120px 10px;
     }
 
     .navigation li {
-        margin: 10px;
+        margin: 15px;
     }
 
     .navigation.active-list {
