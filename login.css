@@ -1,5 +1,6 @@
 .wrapper {
-    position: relative;
+    position: absolute;
+    top: 150px;
     width: 450px;
     height: 450px;
     background: rgba(255,255,255,0.5);
@@ -13,6 +14,7 @@
     overflow: hidden;
     transform: scale(0);
     transition: transform .5s ease, height .2s ease;
+    z-index: 99;
 }
 
 .wrapper.active {
