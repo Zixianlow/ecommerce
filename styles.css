@@ -166,31 +166,51 @@ header {
     position: relative;
     width: 90%;
     left: 5%;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-evenly;
-    background: red;
+    background: url('snow.png') no-repeat fixed;
+    background-size: cover;
+    background-position: cover;
 }
 
 .intro-title, .intro-info {
     margin-left: 20px;
+    z-index: 1;
+}
+
+.intro-title {
+    font-size: 60px;
+    text-shadow: 2px 2px white;
+}
+
+.intro-info {
+    font-size: 20px;
+}
+
+.intro-info-text {
+    background-color: rgba(255,255,255, 0.5);
 }
 
 .intro-pic {
     position: absolute;
-    bottom: 10%;
-    right: 10%;
-    width: 50%;
-    height: 50%;
+    bottom: 0%;
+    right: -15%;
+    width: 70%;
+    height: 80%;
+    min-width: 300px;
+    min-height: 400px;
+    max-height: 600px;
+    
 }
 
 .about  {
     position: relative;
     width: 90%;
     left: 5%;
-    height: 80vh;
+    height: 100vh;
     background: orange;
 }
 
@@ -198,7 +218,7 @@ header {
     position: relative;
     width: 90%;
     left: 5%;
-    height: 80vh;
+    height: 100vh;
     background: yellow;
 }
 
